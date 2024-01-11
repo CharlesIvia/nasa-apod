@@ -9,5 +9,5 @@ export type Apod = {
   media_type: string;
   service_version: string;
   title: string;
-  copyright?: string;
+  copyRight?: string;
 };
