@@ -17,7 +17,7 @@ const ApodListItem = ({ apod, onImagePress = () => {} }: ApodListItemProps) => {
       </Pressable>
       <Text style={styles.date}>{date}</Text>
 
-      <Link href={`/apod/${date}`}>
+      <Link href={`/apod/${date}`} asChild>
         <Pressable style={styles.content}>
           <Text style={styles.title}>{title}</Text>
 
@@ -28,11 +28,45 @@ const ApodListItem = ({ apod, onImagePress = () => {} }: ApodListItemProps) => {
   );
 };
 
+export default ApodListItem;
+
 const styles = StyleSheet.create({
-  item: {},
-  image: {},
-  date: {},
-  title: {},
-  copyRight: {},
-  content: {},
+  item: {
+    backgroundColor: "white",
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
+    elevation: 4,
+    marginBottom: 16,
+    overflow: "hidden",
+    maxWidth: 500,
+    width: "100%",
+    alignSelf: "center",
+  },
+  date: {
+    position: "absolute",
+    top: 10,
+    right: 10,
+    fontSize: 12,
+    color: "white",
+    fontWeight: "bold",
+    backgroundColor: "black",
+    padding: 3,
+    borderRadius: 3,
+    overflow: "hidden",
+  },
+  image: {
+    width: "100%",
+    aspectRatio: 16 / 9,
+  },
+  content: {
+    padding: 10,
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 5,
+  },
+  copyRight: {
+    color: "gray",
+  },
 });
