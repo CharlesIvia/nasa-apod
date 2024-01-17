@@ -23,7 +23,7 @@ const ApodDetails = () => {
   }
 
   return (
-    <ScrollView>
+    <ScrollView  >
       <ApodListItem apod={apod} />
       <Text style={styles.text}>{apod.explanation}</Text>
     </ScrollView>
