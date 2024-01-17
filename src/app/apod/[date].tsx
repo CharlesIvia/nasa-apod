@@ -23,7 +23,7 @@ const ApodDetails = () => {
   }
 
   return (
-    <ScrollView  >
+    <ScrollView>
       <ApodListItem apod={apod} />
       <Text style={styles.text}>{apod.explanation}</Text>
     </ScrollView>
@@ -41,5 +41,6 @@ const styles = StyleSheet.create({
     maxWidth: 500,
     width: "100%",
     alignSelf: "center",
+    paddingBottom: 50,
   },
 });
